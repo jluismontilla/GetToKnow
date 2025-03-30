@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>New Post - GetToKnow</title>
+  <style>
+    body { font-family: sans-serif; max-width: 600px; margin: auto; padding: 2em; }
+    input, textarea { display: block; width: 100%; padding: 8px; margin: 10px 0; }
+  </style>
+</head>
+<body>
+  <h1>Create a New Update</h1>
+  <form method="post">
+    <input name="title" placeholder="Title" required>
+    <textarea name="content" placeholder="Details (optional)" rows="5"></textarea>
+    <input type="submit" value="Post">
+  </form>
+  <p><a href="{{ url_for('index') }}">← Back to feed</a></p>
+</body>
+</html>

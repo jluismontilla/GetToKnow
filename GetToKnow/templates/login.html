@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login - GetToKnow</title>
+  <style>
+    body { font-family: sans-serif; max-width: 400px; margin: auto; padding: 2em; }
+    input { display: block; width: 100%; padding: 8px; margin: 10px 0; }
+    .error { color: red; }
+  </style>
+</head>
+<body>
+  <h1>Login</h1>
+
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <div class="error">{{ messages[0] }}</div>
+    {% endif %}
+  {% endwith %}
+
+  <form method="post">
+    <input name="username" placeholder="Username" required>
+    <input name="password" type="password" placeholder="Password" required>
+    <input type="submit" value="Login">
+  </form>
+</body>
+</html>
